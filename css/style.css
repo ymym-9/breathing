@@ -8,6 +8,7 @@ html {
 	height: 100vh;
 	width: 100%;
 	background-color: #eee;
+	transition: background-color 0.5s;
 }
 
 .circle_inline {
@@ -20,9 +21,10 @@ html {
 	margin: 0 auto;
 	height: 30vh;
 	width: 30vh;
-	border: solid 8px #000;
+	border: solid 8px #121212;
 	border-radius: 30vh;
 	z-index: 999;
+	transition: border 0.5s;
 }
 
 .circle_outline {
@@ -35,9 +37,10 @@ html {
 	margin: 0 auto;
 	height: 30vh;
 	width: 30vh;
-	border: solid 1px #000;
+	border: solid 1px #121212;
 	border-radius: 30vh;
 	z-index: 999;
+	transition: border 0.5s;
 }
 
 .circle {
@@ -57,6 +60,9 @@ html {
 }
 
 .circle_full {
+	position: absolute;
+	top: 30%;
+	left: 50%;
 	transform: translate(-50%, -50%) scale(1);
 	-webkit-transform: translate(-50%, -50%) scale(1);
 	-ms-transform: translate(-50%, -50%) scale(1);
@@ -68,8 +74,106 @@ html {
 	position: absolute;
 	top: 70%;
 	left: 50%;
+	color: #121212;
 	transform: translate(-50%, -50%);
 	font-size: 150%;
+	transition: color 0.5s;
+}
+
+.toggle-switch {
+	position: absolute;
+	top: 85%;
+	left: 50%;
+	width: 200px;
+	transform: translate(-50%, -50%);
+}
+
+.toggle_text {
+	position: absolute;
+	top: 50%;
+	left: 85%;
+	width: 150px;
+	color: #121212;
+	transform: translate(-50%, -50%);
+	font-size: 140%;
+	transition: color 0.5s;
+}
+
+input {
+	display: none;
+}
+
+.toggle_button {
+	width: 75px;
+	height: 42px;
+	background: #ccc;
+	position: relative;
+	display: inline-block;
+	border-radius: 46px;
+	transition: 0.4s;
+	box-sizing: border-box;
+}
+
+.toggle_button::after {
+	/* ○ のスタイル */
+	content: '';
+	position: absolute;
+	width: 42px;
+	height: 42px;
+	border-radius: 100%;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	background: #fff;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	transition: 0.4s;
+	cursor: pointer;
+}
+
+.toggle_button_on {
+	width: 75px;
+	height: 42px;
+	background: #ccc;
+	position: relative;
+	display: inline-block;
+	border-radius: 46px;
+	transition: 0.4s;
+	box-sizing: border-box;
+}
+
+.toggle_button_on::after {
+	content: '';
+	position: absolute;
+	width: 42px;
+	height: 42px;
+	border-radius: 100%;
+	left: 40px;
+	top: 0;
+	z-index: 2;
+	background: #fff;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	transition: 0.4s;
+	cursor: pointer;
+}
+
+.wrapper_dark {
+	background-color: #121212;
+}
+
+.circle_inline_dark {
+	border: solid 8px #ccc;
+}
+
+.circle_outline_dark {
+	border: solid 1px #ccc;
+}
+
+.contents_dark {
+	color: #ccc;
+}
+
+.toggle_text_dark {
+	color: #ccc;
 }
 
 @media screen and (max-width: 480px) {
