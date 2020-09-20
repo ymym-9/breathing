@@ -42,10 +42,9 @@ const playSound = (buffer) => {
 // メイン
 (async () => {
 	// サウンドの読み込み
-	const buffer = await loadSound('../audio/VSQSE_0587_sea_wave.mp3');
-
+	// const buffer = await loadSound('../audio/VSQSE_0587_sea_wave.mp3');
 	// サウンドの再生
-	playSound(buffer);
+	// playSound(buffer);
 })().catch((err) => console.error(err));
 
 // アニメーション部分 //
