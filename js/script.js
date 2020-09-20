@@ -1,7 +1,7 @@
 // 波の音部分（Web Audio API） //
 
 // AudioContextの生成
-const context = new AudioContext();
+// const context = new AudioContext();
 
 // サウンドの読み込み
 const loadSound = (url) => {
