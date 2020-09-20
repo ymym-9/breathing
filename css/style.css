@@ -10,6 +10,21 @@ html {
 	background-color: #eee;
 }
 
+.circle_inline {
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0.1);
+	-webkit-transform: translate(-50%, -50%) scale(0.1);
+	-ms-transform: translate(-50%, -50%) scale(0.1);
+	margin: 0 auto;
+	height: 30vh;
+	width: 30vh;
+	border: solid 8px #000;
+	border-radius: 30vh;
+	z-index: 999;
+}
+
 .circle_outline {
 	position: absolute;
 	top: 30%;
@@ -31,8 +46,8 @@ html {
 	left: 50%;
 	transform: translate(-50%, -50%) scale(0.1);
 	transition: transform 4s;
-	/* -webkit-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%); */
+	-webkit-transform: translate(-50%, -50%) scale(0.1);
+	-ms-transform: translate(-50%, -50%) scale(0.1);
 	margin: 0 auto;
 	height: 30vh;
 	width: 30vh;
@@ -43,6 +58,8 @@ html {
 
 .circle_full {
 	transform: translate(-50%, -50%) scale(1);
+	-webkit-transform: translate(-50%, -50%) scale(1);
+	-ms-transform: translate(-50%, -50%) scale(1);
 	transition: transform 4s;
 	background-color: #00ffff;
 }
@@ -52,5 +69,11 @@ html {
 	top: 70%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	font-size: 200%;
+	font-size: 150%;
+}
+
+@media screen and (max-width: 480px) {
+	.contents {
+		width: 80%;
+	}
 }
